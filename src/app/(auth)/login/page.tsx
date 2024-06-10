@@ -42,8 +42,8 @@ const Login = () => {
               <input
                 {...register("email", {
                   required: true,
-                  minLength: 6,
-                  maxLength: 20,
+                  minLength: 20,
+                  maxLength: 30,
                 })}
                 type="text"
                 className="w-full p-2 border border-gray-300 rounded mt-1"
