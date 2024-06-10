@@ -15,7 +15,14 @@ const config: Config = {
         darkBlue: "#1A3365",
         purple: "#54298b",
         lightGreen: "#07ab7a",
+        brown: "#8e6b6b",
         unselected: "#8C8C8C" ,
+},
+fontFamily:{
+  groteskBook: ["var(--font-groteskBook)"],
+  groteskLight: ["var(--font-groteskLight)"],
+  groteskMedium:["var(--font-groteskMedium)"]
+
 },
     },
   },

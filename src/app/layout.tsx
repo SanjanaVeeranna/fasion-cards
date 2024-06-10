@@ -1,8 +1,37 @@
 import type { Metadata } from "next";
+import localFont from "next/font/local";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
+
+const groteskBook = localFont({
+  src: [
+    {
+      path: "../../public/fonts/SharpGrotesk-Book20.otf",
+      weight: "700",
+    },
+  ],
+  variable: "--font-groteskBook",
+});
+const groteskLight = localFont({
+  src: [
+    {
+      path: "../../public/fonts/SharpGrotesk-Light20.otf",
+      weight: "700",
+    },
+  ],
+  variable: "--font-groteskLight",
+});
+const groteskMedium = localFont({
+  src: [
+    {
+      path: "../../public/fonts/SharpGrotesk-Medium25.otf",
+      weight: "500",
+    },
+  ],
+  variable: "--font-groteskMedium",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +45,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={`${groteskBook.variable} ${groteskLight.variable} ${groteskMedium.variable}`}
+      >
+        {children}
+      </body>
     </html>
   );
 }

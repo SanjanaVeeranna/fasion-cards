@@ -30,7 +30,7 @@ const Login = () => {
         <div className="max-w-md w-full mx-auto mt-4 bg-white p-8 border border-gray-300">
           <form
             onSubmit={handleSubmit(onSubmit)} // Add onError callback
-            className="space-y-6"
+            className="space-y-6 text-black"
           >
             <div>
               <label
