@@ -17,6 +17,7 @@ const config: Config = {
         lightGreen: "#07ab7a",
         brown: "#8e6b6b",
         unselected: "#8C8C8C" ,
+        red: "#ff5f52",
 },
 fontFamily:{
   groteskBook: ["var(--font-groteskBook)"],

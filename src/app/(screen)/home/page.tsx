@@ -27,22 +27,11 @@ export default function App() {
     );
   };
 
-  const handleClick = (id: number) => {
-    setCards((prevCards) =>
-      prevCards.map((card) => {
-        if (card.id === id) {
-          return { ...card, isLiked: !card.isLiked };
-        }
-        return card;
-      })
-    );
-  };
-
   return (
     <div>
       <div className="p-4 bg-white">
         <div className="text-center text-black text-4xl font-groteskMedium ">
-          SELECTED {cards.reduce((acc, card) => acc + card.clickCount, 0)}
+          Wishlist {cards.reduce((acc, card) => acc + card.clickCount, 0)}
         </div>
         <div className="flex flex-wrap justify-center ">
           {cards.map((card, index) => (
@@ -59,7 +48,7 @@ export default function App() {
                 <div className="absolute top-0 right-0 p-4">
                   <Heart
                     className={`w-6 h-6 ${
-                      card.isLiked ? "text-red-500" : "text-white-500"
+                      card.isLiked ? "text-red" : "text-white-500"
                     } `}
                     onClick={() => handleHeartClick(card.id)}
                   />
